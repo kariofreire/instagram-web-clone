@@ -12,7 +12,12 @@
     <a class="topbar__link centralize" href="#">
       <heart-icon class="topbar__icon" size="22"></heart-icon>
     </a>
-    <a id="profile" class="topbar__link" href="#">
+    <a
+      @click.prevent="$emit('show')"
+      id="profile"
+      class="topbar__link"
+      href="#"
+    >
       <img src="@/assets/profile.jpg" alt="Perfil do usuário" />
     </a>
   </nav>

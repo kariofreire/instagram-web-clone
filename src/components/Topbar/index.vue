@@ -2,7 +2,8 @@
   <header class="topbar">
     <div class="topbar__container centralize">
       <topbar-logo />
-      <topbar-nav />
+      <topbar-nav @show="toggleDropdown" />
+      <dropdown v-show="active" />
     </div>
   </header>
 </template>
@@ -11,11 +12,24 @@
 import TopbarLogo from './TopbarLogo';
 import TopbarNav from './TopbarNav';
 
+import Dropdown from '@/components/Dropdown';
+
 export default {
   name: 'topbar',
   components: {
     TopbarLogo,
-    TopbarNav
+    TopbarNav,
+    Dropdown
+  },
+  data() {
+    return {
+      active: false
+    };
+  },
+  methods: {
+    toggleDropdown() {
+      this.active = !this.active;
+    }
   }
 };
 </script>
@@ -28,7 +42,7 @@ export default {
 
   &__container {
     height: 100%;
-    max-width: 97.5rem;
+    max-width: var(--width);
     margin: 0 auto;
     padding: 0 2rem;
   }
