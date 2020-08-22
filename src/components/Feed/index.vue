@@ -1,17 +1,12 @@
 <template>
   <div class="feed">
-    <stories />
+    <p>feed</p>
   </div>
 </template>
 
 <script>
-import Stories from './Stories';
-
 export default {
-  name: 'feed',
-  components: {
-    Stories
-  }
+  name: 'feed'
 };
 </script>
 

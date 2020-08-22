@@ -18,7 +18,7 @@
       class="topbar__link"
       href="#"
     >
-      <img src="@/assets/person-1.svg" alt="Perfil do usuário" />
+      <img src="@/assets/person-1.jpg" alt="Perfil do usuário" />
     </a>
   </nav>
 </template>
@@ -61,6 +61,7 @@ export default {
     height: 100%;
     width: 100%;
     border-radius: 50%;
+    object-fit: cover;
   }
 }
 </style>
