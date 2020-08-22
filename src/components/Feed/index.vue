@@ -1,6 +1,6 @@
 <template>
   <div class="feed">
-    <p>feed</p>
+    <!-- TODO: create feed -->
   </div>
 </template>
 
