@@ -43,8 +43,8 @@ export default {
   &__container {
     height: 100%;
     max-width: var(--width);
+    padding: 0 var(--gutter);
     margin: 0 auto;
-    padding: 0 2rem;
   }
 }
 </style>

@@ -18,7 +18,7 @@
       class="topbar__link"
       href="#"
     >
-      <img src="@/assets/profile.jpg" alt="Perfil do usuário" />
+      <img src="@/assets/person-1.svg" alt="Perfil do usuário" />
     </a>
   </nav>
 </template>
