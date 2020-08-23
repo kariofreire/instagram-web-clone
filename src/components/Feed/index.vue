@@ -68,4 +68,19 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.feed {
+  @media only screen and (max-width: 998px) {
+    width: 80%;
+    margin: auto;
+  }
+
+  @media only screen and (max-width: 800px) {
+    width: 90%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+</style>

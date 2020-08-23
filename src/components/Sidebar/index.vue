@@ -64,6 +64,10 @@ export default {
   &__profile {
     margin-top: 1.8rem;
   }
+
+  @media only screen and (max-width: 998px) {
+    display: none;
+  }
 }
 
 .suggestions {

@@ -20,5 +20,9 @@ export default {
   display: grid;
   grid-template-columns: 1fr 23rem;
   grid-gap: 3rem;
+
+  @media only screen and (max-width: 998px) {
+    display: block;
+  }
 }
 </style>
