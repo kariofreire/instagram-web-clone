@@ -13,12 +13,12 @@ export default {
 <style lang="scss" scoped>
 .container {
   max-width: var(--width);
-  padding: 3rem var(--gutter) 0;
+  padding: 3rem 2rem 0;
   margin: 0 auto;
 
   /* grid */
   display: grid;
   grid-template-columns: 1fr 23rem;
-  grid-gap: var(--gutter);
+  grid-gap: 3rem;
 }
 </style>

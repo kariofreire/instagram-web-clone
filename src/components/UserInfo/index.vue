@@ -8,7 +8,7 @@
     />
     <div class="user-info__content">
       <strong>{{ username }}</strong>
-      <span>{{ display_name }}</span>
+      <span v-if="display_name">{{ display_name }}</span>
     </div>
   </div>
 </template>
@@ -40,7 +40,7 @@ export default {
     height: 5.6rem;
     width: 5.6rem;
     border-radius: 50%;
-    margin-right: var(--gutter);
+    margin-right: 2rem;
 
     &.small {
       height: 3.2rem;

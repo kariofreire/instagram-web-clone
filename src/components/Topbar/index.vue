@@ -36,6 +36,9 @@ export default {
 
 <style lang="scss" scoped>
 .topbar {
+  position: sticky;
+  top: 0px;
+  z-index: 10;
   height: 5.4rem;
   background-color: #fff;
   border-bottom: 1px solid var(--color-light);
@@ -43,7 +46,7 @@ export default {
   &__container {
     height: 100%;
     max-width: var(--width);
-    padding: 0 var(--gutter);
+    padding: 0 2rem;
     margin: 0 auto;
   }
 }
