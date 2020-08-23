@@ -19,8 +19,16 @@
       <send-icon size="24"></send-icon>
       <bookmark-icon size="24"></bookmark-icon>
     </div>
-
-    <!-- TODO: create comments section -->
+    <ul class="post__comments">
+      <li v-for="(comment, index) in post.comments" :key="index">
+        <strong>{{ comment.author }}</strong>
+        <span>{{ comment.content }}</span>
+      </li>
+    </ul>
+    <div class="post__form">
+      <input v-model="text" type="text" placeholder="Adicione um comentário" />
+      <button :disabled="!text">Publicar</button>
+    </div>
   </li>
 </template>
 
@@ -50,6 +58,11 @@ export default {
       type: Object,
       required: true
     }
+  },
+  data() {
+    return {
+      text: ''
+    };
   },
   computed: {
     resolveImage() {
@@ -95,6 +108,40 @@ export default {
 
       &:last-child {
         margin-left: auto;
+      }
+    }
+  }
+
+  &__comments {
+    padding: 1rem 1.6rem;
+
+    strong {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__form {
+    border-top: 1px solid var(--color-light);
+    padding: 1.6rem;
+    display: flex;
+
+    input {
+      flex: 1;
+      border: none;
+      outline: 0;
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      outline: 0;
+      cursor: pointer;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--color-primary);
+
+      &:disabled {
+        opacity: 0.5;
       }
     }
   }

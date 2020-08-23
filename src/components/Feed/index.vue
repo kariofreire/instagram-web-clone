@@ -20,7 +20,47 @@ export default {
         {
           username: 'rocketseat',
           profile_image: 'rocketseat.jpg',
-          post_image: 'rocketseat-post.png'
+          post_image: 'rocketseat-post.png',
+          comments: [
+            {
+              author: 'mayk',
+              content: 'fala deeeev 🚀'
+            },
+            {
+              author: 'guilhermerodz',
+              content: 'belo wallpaper 💻'
+            }
+          ]
+        },
+        {
+          username: 'traversymedia',
+          profile_image: 'traversy.jpg',
+          post_image: 'traversy-post.jpg',
+          comments: [
+            {
+              author: 'deved',
+              content: 'awesome 💚'
+            },
+            {
+              author: 'tylerpotts',
+              content: 'Amazing crash course 👏'
+            }
+          ]
+        },
+        {
+          username: 'filipedeschamps',
+          profile_image: 'filipe.jpg',
+          post_image: 'filipe-post.jpg',
+          comments: [
+            {
+              author: 'diego3g',
+              content: 'muito booom 🚀'
+            },
+            {
+              author: 'mayk',
+              content: 'boa filipe 😜'
+            }
+          ]
         }
       ]
     };
