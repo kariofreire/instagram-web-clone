@@ -1,6 +1,6 @@
 ## Instagram Clone
 
-> clone da versão web do instagram
+> :robot: clone da versão web do instagram
 
 ![preview](preview.png)
 
