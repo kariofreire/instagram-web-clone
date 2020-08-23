@@ -1,21 +1,30 @@
 <template>
   <div class="feed">
     <ul class="feed_posts">
-      <post v-for="(post, index) in posts" :key="index" :post="post" />
+      <post
+        @show-modal="toggleModal"
+        v-for="(post, index) in posts"
+        :key="index"
+        :post="post"
+      />
     </ul>
+    <modal @close-modal="toggleModal" v-show="show" />
   </div>
 </template>
 
 <script>
 import Post from './Post';
+import Modal from '@/components/Modal';
 
 export default {
   name: 'feed',
   components: {
-    Post
+    Post,
+    Modal
   },
   data() {
     return {
+      show: false,
       posts: [
         {
           username: 'rocketseat',
@@ -64,6 +73,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    toggleModal() {
+      this.show = !this.show;
+    }
   }
 };
 </script>

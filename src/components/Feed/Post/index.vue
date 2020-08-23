@@ -6,7 +6,7 @@
         :username="post.username"
         :small="true"
       />
-      <button class="post__menu">
+      <button @click="$emit('show-modal')" class="post__menu">
         <more-horizontal-icon size="22"></more-horizontal-icon>
       </button>
     </div>
