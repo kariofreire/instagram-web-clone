@@ -37,8 +37,8 @@ export default {
 .dropdown {
   position: absolute;
   z-index: 3;
-  top: 5.4rem;
-  right: 21rem;
+  top: 38px;
+  right: 0;
 
   width: 20rem;
   background: #fff;

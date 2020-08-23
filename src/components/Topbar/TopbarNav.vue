@@ -13,18 +13,20 @@
       <heart-icon class="topbar__icon" size="22"></heart-icon>
     </a>
     <a
-      @click.prevent="$emit('show')"
+      @click.prevent="toggleDropdown"
       id="profile"
       class="topbar__link"
       href="#"
     >
       <img src="@/assets/profile.jpg" alt="Perfil do usuário" />
+      <dropdown v-show="active" />
     </a>
   </nav>
 </template>
 
 <script>
 import { HomeIcon, SendIcon, CompassIcon, HeartIcon } from 'vue-feather-icons';
+import Dropdown from '@/components/Dropdown';
 
 export default {
   name: 'topbar-nav',
@@ -32,7 +34,18 @@ export default {
     HomeIcon,
     SendIcon,
     CompassIcon,
-    HeartIcon
+    HeartIcon,
+    Dropdown
+  },
+  data() {
+    return {
+      active: false
+    };
+  },
+  methods: {
+    toggleDropdown() {
+      this.active = !this.active;
+    }
   }
 };
 </script>
@@ -56,6 +69,7 @@ export default {
 #profile {
   width: 2.2rem;
   height: 2.2rem;
+  position: relative;
 
   img {
     height: 100%;
