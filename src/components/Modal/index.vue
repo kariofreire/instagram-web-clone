@@ -34,6 +34,7 @@ export default {
 
   display: flex;
   flex-direction: column;
+  margin: 1.5rem;
   overflow: hidden;
 
   button {
